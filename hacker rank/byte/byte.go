@@ -21,7 +21,7 @@ func countBits(num uint32) int32 {
 		if int32(num) < val {
 			break
 		}
-		newNum = newNum - val
+		//newNum = newNum - val
 		val = val * 2
 		power += 1
 	}
@@ -41,7 +41,7 @@ func countBits(num uint32) int32 {
 }
 
 func main() {
-	num := 128
+	/*num := 128
 	power := 0
 	val := 1
 	for {
@@ -53,7 +53,7 @@ func main() {
 		val = val * 2
 		power += 1
 
-	}
-	fmt.Println(Power(2, 3))
-	fmt.Println(countBits(uint32(255)))
+	}*/
+	//fmt.Println(Power(2, 3))
+	fmt.Println(countBits(uint32(25)))
 }
