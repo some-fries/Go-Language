@@ -13,6 +13,7 @@ func main() {
 		for {
 			c1 <- "every 500 ms"
 			time.Sleep(time.Millisecond * 500)
+			close(c1)
 		}
 	}()
 
@@ -20,6 +21,7 @@ func main() {
 		for {
 			c2 <- "every two seconds"
 			time.Sleep(time.Second * 2)
+			close(c2)
 		}
 	}()
 
@@ -35,6 +37,10 @@ func main() {
 			fmt.Println(msg1)
 		case msg2 := <-c2:
 			fmt.Println(msg2)
+		case (<-c1): 
 		}
+	
+
+		// case <-c1
 	}
 }
