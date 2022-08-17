@@ -75,7 +75,7 @@ func main() {
 	fmt.Println(tree.New(1))*/
 	tree1 := tree.New(1)
 	//tree2:= tree1
-	tree2 := tree.New(2)
+	tree2 := tree.New(1)
 	same := Same(tree1, tree2)
 	fmt.Println(same)
 	//fmt.Println(tree1)
